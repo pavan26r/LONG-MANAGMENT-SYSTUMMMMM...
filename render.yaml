@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: lms-backend
+    env: node
+    plan: free
+    region: oregon
+    branch: main
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    autoDeploy: true
+    disk:
+      mountPath: /tmp/uploads
+      sizeGB: 1
+    # Do NOT store secrets here. Set the following env vars in Render dashboard:
+    # - MONGODB_URI
+    # - JWT_SECRET
+    # - JWT_EXPIRES_IN
+    # - FRONTEND_URL
+    # - MAX_FILE_SIZE
+    # If you need persistent uploads, either configure Render Disk (above) or use an S3-compatible storage service.
