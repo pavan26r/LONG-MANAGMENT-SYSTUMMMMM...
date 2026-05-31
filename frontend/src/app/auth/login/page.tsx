@@ -34,16 +34,6 @@ export default function LoginPage() {
       setLoading(false);
     }
   };
-
-  const demoCredentials = [
-    { role: 'Borrower', email: 'borrower@lms.com', password: 'Borrower@123' },
-    { role: 'Admin', email: 'admin@lms.com', password: 'Admin@123' },
-    { role: 'Sales', email: 'sales@lms.com', password: 'Sales@123' },
-    { role: 'Sanction', email: 'sanction@lms.com', password: 'Sanction@123' },
-    { role: 'Disbursement', email: 'disbursement@lms.com', password: 'Disbursement@123' },
-    { role: 'Collection', email: 'collection@lms.com', password: 'Collection@123' },
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
@@ -98,24 +88,7 @@ export default function LoginPage() {
               Create account
             </Link>
           </p>
-        </div>
-
-        {/* Demo Credentials */}
-        <div className="mt-4 card">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Demo Credentials</p>
-          <div className="space-y-1.5">
-            {demoCredentials.map((c) => (
-              <button
-                key={c.role}
-                onClick={() => { setEmail(c.email); setPassword(c.password); }}
-                className="w-full flex justify-between items-center text-xs px-3 py-2 rounded-lg bg-gray-50 hover:bg-blue-50 transition-colors"
-              >
-                <span className="font-medium text-gray-700">{c.role}</span>
-                <span className="text-gray-400">{c.email}</span>
-              </button>
-            ))}
-          </div>
-        </div>
+        </div>    
       </div>
     </div>
   );
