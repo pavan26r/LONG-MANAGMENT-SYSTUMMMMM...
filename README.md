@@ -165,3 +165,4 @@ lms/
         │   └── bre.ts           # Client-side BRE
         └── types/index.ts
 ```
+Link (https://youtu.be/n-_yemQLRNA?si=6Qd-yYyiLZgda8XJ)
