@@ -5,6 +5,7 @@ services:
     plan: free
     region: oregon
     branch: main
+    rootDirectory: backend
     buildCommand: npm install && npm run build
     startCommand: npm run start
     autoDeploy: true
